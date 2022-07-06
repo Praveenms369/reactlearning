@@ -7,7 +7,7 @@ import CustomRouter from './routes';
 function App() {
   return (
     <div className="App">
-       <CustomRouter></CustomRouter>
+       <CustomRouter></CustomRouter> 
     </div>
   );
 }

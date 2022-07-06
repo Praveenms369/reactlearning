@@ -5,7 +5,7 @@ import TextField from '@mui/material/TextField';
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Button from '@mui/material/Button';
-import Link from '@mui/material/Link';
+import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { postUserRegistration } from '../../services/auth/index';
 function Registration() {
@@ -19,15 +19,16 @@ function Registration() {
 
   const handleRegistration = async () => {
     debugger;
-    const req = {
-      EmailId: email,
-      Password: password,
-      FisrtName: fname,
-      LastName: lname,
-    };
-    const res = await postUserRegistration(user);
+    // const req = {
+    //   EmailId: email,
+    //   Password: password,
+    //   FisrtName: fname,
+    //   LastName: lname,
+    // };
+    // const res = await postUserRegistration(user);
     debugger;
-    if (res.data) navigate('/sigin');
+    // if (res.data)
+    navigate('/sigin');
   };
 
   const handleChange = (e) => {
@@ -143,7 +144,9 @@ function Registration() {
           </Grid>
           <Grid xs={6}></Grid>
           <Grid>
-            <Link href='#'>Already having an account?</Link>
+            <Link style={{ color: 'blue' }} to='/sigin'>
+              Already having an account?
+            </Link>
           </Grid>
         </Grid>
       </Box>

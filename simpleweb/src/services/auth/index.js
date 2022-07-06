@@ -6,3 +6,10 @@ export const postUserRegistration = async (userRequest) => {
   const response= await axios.post(base_url, userRequest)
   return response 
 };
+
+export const postUserSignIn = async (userRequest) => {
+    debugger
+  const base_url = getUrl('/authorizer/login');
+  const response= await axios.post(base_url, userRequest)
+  return response 
+};
